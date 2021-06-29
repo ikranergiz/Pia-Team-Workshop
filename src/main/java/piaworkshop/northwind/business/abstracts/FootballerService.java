@@ -10,4 +10,8 @@ public interface FootballerService {
 
 	DataResult<List<Footballer>> getAll();
 	Result add(Footballer footballer);
+
+	DataResult<List<Footballer>> getByFootballerTeamId(int footballerTeamId);
+	
+	Footballer deleteById(int id);
 }

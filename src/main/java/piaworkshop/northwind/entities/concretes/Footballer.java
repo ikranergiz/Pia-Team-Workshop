@@ -26,8 +26,8 @@ public class Footballer {
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "football_team_id")
-	private int footballerTeamId;
+	//@Column(name = "football_team_id")
+	//private int footballerTeamId;
 	
 	@Column(name = "first_name")
 	private String firstName;
@@ -44,8 +44,8 @@ public class Footballer {
 	@Column(name = "uniform_number")
 	private String uniformNumber;
 	
-	/*@ManyToOne()
+	@ManyToOne()
 	@JoinColumn(name = "football_team_id")
-	private FootballTeam footballTeam;*/
+	private FootballTeam footballTeam;
 
 }

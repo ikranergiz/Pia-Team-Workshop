@@ -6,4 +6,5 @@ import piaworkshop.northwind.entities.concretes.FootballTeam;
 
 public interface FootballTeamDao extends JpaRepository<FootballTeam, Integer>{
 
+	
 }

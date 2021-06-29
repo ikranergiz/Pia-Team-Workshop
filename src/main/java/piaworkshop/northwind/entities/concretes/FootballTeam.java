@@ -46,7 +46,7 @@ public class FootballTeam {
 	@Column(name = "colors")
 	private String colors;
 	
-	/*@OneToMany(mappedBy = "footballerTeam")
-	List<Footballer> footballers;*/
+	@OneToMany(mappedBy = "footballTeam")
+	private List<Footballer> footballers;
 
 }

@@ -9,6 +9,7 @@ import piaworkshop.northwind.business.abstracts.FootballerService;
 import piaworkshop.northwind.core.utilities.results.DataResult;
 import piaworkshop.northwind.core.utilities.results.Result;
 import piaworkshop.northwind.core.utilities.results.SuccessDataResult;
+import piaworkshop.northwind.core.utilities.results.SuccessResult;
 import piaworkshop.northwind.dataAccess.abstracts.FootballerDao;
 import piaworkshop.northwind.entities.concretes.Footballer;
 
@@ -31,8 +32,20 @@ public class FootballerManager implements FootballerService{
 
 	@Override
 	public Result add(Footballer footballer) {
-		// TODO Auto-generated method stub
-		return null;
+		this.footballerDao.save(footballer);
+		return new SuccessResult("Futbolcu eklendi");
 	}
+
+	public DataResult<List<Footballer>> getByFootballerTeamId(int footballerTeamId) {
+		return new SuccessDataResult<List<Footballer>>(
+				this.footballerDao.getByFooballerTeamId(footballerTeamId), "başarılı");
+	}
+
+	@Override
+	public Footballer deleteById(int id) {
+		return this.footballerDao.deleteById(id);
+	}
+
+	
 
 }

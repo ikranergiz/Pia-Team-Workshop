@@ -11,6 +11,7 @@ import piaworkshop.northwind.core.utilities.results.Result;
 import piaworkshop.northwind.core.utilities.results.SuccessDataResult;
 import piaworkshop.northwind.dataAccess.abstracts.FootballTeamDao;
 import piaworkshop.northwind.entities.concretes.FootballTeam;
+import piaworkshop.northwind.entities.concretes.Footballer;
 
 @Service
 public class FootballTeamManager implements FootballTeamService{
@@ -34,4 +35,5 @@ public class FootballTeamManager implements FootballTeamService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 }
